@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E655E3522A5058BF05E8B98 /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CF17C4635DE59276B6828 /* DeviceService.swift */; };
+		10D5333ECF1F332C35AB96B9 /* SignaturePadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B2F0146FB8C4ABB6F890E2 /* SignaturePadView.swift */; };
+		34010468A0684F8EA0186C83 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE36574AAE049B3E9FBAA4 /* RootView.swift */; };
+		34ED32FFD099778CA8FCB284 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6307D8BA41A81E88C424CD49 /* Media.xcassets */; };
+		43553C66619314C79842C363 /* QuickSignFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047059639D6F66CEFEA6E2E3 /* QuickSignFlowView.swift */; };
+		4501886FEBACFC06A213B70C /* IdleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD329C998D541C4022C04F5 /* IdleView.swift */; };
+		46FF9A38C2E38D0354FFF82E /* GLPIKioskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467BBEFF12279CF03E37F50 /* GLPIKioskApp.swift */; };
+		584BB9412F22616A90790E30 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7420CF60DAFCA2ECCFE11D /* HTTPClient.swift */; };
+		6A4F21A0E72B0D9F7A804892 /* DebugLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E716A1C2289C7ADC5BE99A /* DebugLogger.swift */; };
+		78DB02713FB45A232981CCA0 /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196DFE9BAA2737B9D1BB23FB /* AppModels.swift */; };
+		7A75CD31EE64B340F436233A /* GLPIAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601704329A66C0438FF711CD /* GLPIAuthService.swift */; };
+		7C8184F45DF3FC0EA3439ECD /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9EF099991EB1CD71F27B4 /* KeychainStore.swift */; };
+		95B003212407DFF8DAB9DCE8 /* QuickSignAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F13F3E744552683F209095 /* QuickSignAPIService.swift */; };
+		9987D7E595883AE18FFF975C /* KioskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6FD62D08FF4E031C106E7 /* KioskState.swift */; };
+		A0C9576F6FCFE57D06467494 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C9FD5F44538B92D77CFDC /* Theme.swift */; };
+		A67DFE371FF6366B24383974 /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD4A9799870A45A0AE6A22 /* ConfirmationView.swift */; };
+		AF27489150AF591088E50AC3 /* SignatureRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F330F6289624B5F13629A99F /* SignatureRequestView.swift */; };
+		B17DCD513E7FC1A02B6CD20E /* SettingsGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7B6CD7AE37FD43153AB437 /* SettingsGateView.swift */; };
+		B5DD8D770DE3B924FE7E6BA1 /* DirectSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E09FE20C4B98494951312 /* DirectSignView.swift */; };
+		BC9141F70ED8F8397E28179E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 2754C86C16760CB8DD3BD491 /* PrivacyInfo.xcprivacy */; };
+		C94F436C8473A46B1F445FB8 /* DebugBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855609FD7386CC2E6B7112A2 /* DebugBarView.swift */; };
+		CB36E8FA7D69D86B4E030B5E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBCDCC7BFE41064D38B9099 /* SettingsView.swift */; };
+		CCCBDC205C3BA59717821CFD /* JSONConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8466AB55A960ED1A243EB1D /* JSONConversions.swift */; };
+		EA9243B5728DE9FB86635784 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB17BEDD3932945B9EC7D5 /* APIError.swift */; };
+		F8FF46A72AC572953F2B3738 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C522CC9511379C1B42C43D /* SetupView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		047059639D6F66CEFEA6E2E3 /* QuickSignFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSignFlowView.swift; sourceTree = "<group>"; };
+		107C9FD5F44538B92D77CFDC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		166BAB63638FB7A1FCA4FD14 /* GLPIKiosk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLPIKiosk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		196DFE9BAA2737B9D1BB23FB /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		20F9EF099991EB1CD71F27B4 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		21E716A1C2289C7ADC5BE99A /* DebugLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogger.swift; sourceTree = "<group>"; };
+		23C522CC9511379C1B42C43D /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		24F13F3E744552683F209095 /* QuickSignAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSignAPIService.swift; sourceTree = "<group>"; };
+		2754C86C16760CB8DD3BD491 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3C7420CF60DAFCA2ECCFE11D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		48EE36574AAE049B3E9FBAA4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		601704329A66C0438FF711CD /* GLPIAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLPIAuthService.swift; sourceTree = "<group>"; };
+		6307D8BA41A81E88C424CD49 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		6BD329C998D541C4022C04F5 /* IdleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleView.swift; sourceTree = "<group>"; };
+		706E09FE20C4B98494951312 /* DirectSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectSignView.swift; sourceTree = "<group>"; };
+		7BBCDCC7BFE41064D38B9099 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7D4CF17C4635DE59276B6828 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
+		855609FD7386CC2E6B7112A2 /* DebugBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugBarView.swift; sourceTree = "<group>"; };
+		8DBB17BEDD3932945B9EC7D5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		A2BD4A9799870A45A0AE6A22 /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
+		A467BBEFF12279CF03E37F50 /* GLPIKioskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLPIKioskApp.swift; sourceTree = "<group>"; };
+		AFA6FD62D08FF4E031C106E7 /* KioskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskState.swift; sourceTree = "<group>"; };
+		E8466AB55A960ED1A243EB1D /* JSONConversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConversions.swift; sourceTree = "<group>"; };
+		F330F6289624B5F13629A99F /* SignatureRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureRequestView.swift; sourceTree = "<group>"; };
+		F9B2F0146FB8C4ABB6F890E2 /* SignaturePadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePadView.swift; sourceTree = "<group>"; };
+		FA454CF7A83C680197723488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FC7B6CD7AE37FD43153AB437 /* SettingsGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGateView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		060E82D0817485928A96EF3C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				20F9EF099991EB1CD71F27B4 /* KeychainStore.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		0B023AC2934548D2FF4CCA2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				166BAB63638FB7A1FCA4FD14 /* GLPIKiosk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F6A712F1CE3769D2B7738DA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9E46412481F579D7B880D4F6 /* Models */,
+				FA4622E889C4161508B68922 /* Networking */,
+				25F40AD57A73D05042E335FD /* Services */,
+				060E82D0817485928A96EF3C /* Storage */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		119B945BB702D319AD655325 /* GLPIKiosk */ = {
+			isa = PBXGroup;
+			children = (
+				FA454CF7A83C680197723488 /* Info.plist */,
+				6307D8BA41A81E88C424CD49 /* Media.xcassets */,
+				2754C86C16760CB8DD3BD491 /* PrivacyInfo.xcprivacy */,
+				E33AF700F7B47A79277AC763 /* App */,
+				0F6A712F1CE3769D2B7738DA /* Core */,
+				884AFEE1452F34EBD0C89951 /* Features */,
+				2953D11F7B517B1F16213692 /* Shared */,
+			);
+			path = GLPIKiosk;
+			sourceTree = "<group>";
+		};
+		15456E0945D447845993F339 = {
+			isa = PBXGroup;
+			children = (
+				119B945BB702D319AD655325 /* GLPIKiosk */,
+				0B023AC2934548D2FF4CCA2D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DF8B133249CB5CDB9952F0C /* Idle */ = {
+			isa = PBXGroup;
+			children = (
+				6BD329C998D541C4022C04F5 /* IdleView.swift */,
+			);
+			path = Idle;
+			sourceTree = "<group>";
+		};
+		25F40AD57A73D05042E335FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				21E716A1C2289C7ADC5BE99A /* DebugLogger.swift */,
+				7D4CF17C4635DE59276B6828 /* DeviceService.swift */,
+				601704329A66C0438FF711CD /* GLPIAuthService.swift */,
+				AFA6FD62D08FF4E031C106E7 /* KioskState.swift */,
+				24F13F3E744552683F209095 /* QuickSignAPIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2953D11F7B517B1F16213692 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FD949C0FE74C18C754B003C5 /* Design */,
+				A042FFC9EBD14B0EC5283623 /* Helpers */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5D965180761CF0BFAF3FFCD9 /* DirectSign */ = {
+			isa = PBXGroup;
+			children = (
+				706E09FE20C4B98494951312 /* DirectSignView.swift */,
+				047059639D6F66CEFEA6E2E3 /* QuickSignFlowView.swift */,
+			);
+			path = DirectSign;
+			sourceTree = "<group>";
+		};
+		7F85F01BBC22F009CF029814 /* Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				A2BD4A9799870A45A0AE6A22 /* ConfirmationView.swift */,
+			);
+			path = Confirmation;
+			sourceTree = "<group>";
+		};
+		884AFEE1452F34EBD0C89951 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				7F85F01BBC22F009CF029814 /* Confirmation */,
+				5D965180761CF0BFAF3FFCD9 /* DirectSign */,
+				1DF8B133249CB5CDB9952F0C /* Idle */,
+				F4C7A0935CC8FB11D16D8559 /* Settings */,
+				D2904269FB4343AF20A4B941 /* Setup */,
+				960FFDF1350AF0B9D6527418 /* Signature */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		960FFDF1350AF0B9D6527418 /* Signature */ = {
+			isa = PBXGroup;
+			children = (
+				F9B2F0146FB8C4ABB6F890E2 /* SignaturePadView.swift */,
+				F330F6289624B5F13629A99F /* SignatureRequestView.swift */,
+			);
+			path = Signature;
+			sourceTree = "<group>";
+		};
+		9E46412481F579D7B880D4F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				196DFE9BAA2737B9D1BB23FB /* AppModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A042FFC9EBD14B0EC5283623 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				855609FD7386CC2E6B7112A2 /* DebugBarView.swift */,
+				E8466AB55A960ED1A243EB1D /* JSONConversions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D2904269FB4343AF20A4B941 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				23C522CC9511379C1B42C43D /* SetupView.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		E33AF700F7B47A79277AC763 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A467BBEFF12279CF03E37F50 /* GLPIKioskApp.swift */,
+				48EE36574AAE049B3E9FBAA4 /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F4C7A0935CC8FB11D16D8559 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FC7B6CD7AE37FD43153AB437 /* SettingsGateView.swift */,
+				7BBCDCC7BFE41064D38B9099 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FA4622E889C4161508B68922 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8DBB17BEDD3932945B9EC7D5 /* APIError.swift */,
+				3C7420CF60DAFCA2ECCFE11D /* HTTPClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FD949C0FE74C18C754B003C5 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				107C9FD5F44538B92D77CFDC /* Theme.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7E853ADFAA9468DD76728B3 /* GLPIKiosk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19835441CD231EA8980AC7CF /* Build configuration list for PBXNativeTarget "GLPIKiosk" */;
+			buildPhases = (
+				091D86F7B399208F8F634799 /* Sources */,
+				F3ED76F30B41A58F53EB8CFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLPIKiosk;
+			packageProductDependencies = (
+			);
+			productName = GLPIKiosk;
+			productReference = 166BAB63638FB7A1FCA4FD14 /* GLPIKiosk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AD861E4E2259D619797D2CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 11B0703025B7AFC4A8094584 /* Build configuration list for PBXProject "GLPIKiosk" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 15456E0945D447845993F339;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7E853ADFAA9468DD76728B3 /* GLPIKiosk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3ED76F30B41A58F53EB8CFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34ED32FFD099778CA8FCB284 /* Media.xcassets in Resources */,
+				BC9141F70ED8F8397E28179E /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		091D86F7B399208F8F634799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA9243B5728DE9FB86635784 /* APIError.swift in Sources */,
+				78DB02713FB45A232981CCA0 /* AppModels.swift in Sources */,
+				A67DFE371FF6366B24383974 /* ConfirmationView.swift in Sources */,
+				C94F436C8473A46B1F445FB8 /* DebugBarView.swift in Sources */,
+				6A4F21A0E72B0D9F7A804892 /* DebugLogger.swift in Sources */,
+				0E655E3522A5058BF05E8B98 /* DeviceService.swift in Sources */,
+				B5DD8D770DE3B924FE7E6BA1 /* DirectSignView.swift in Sources */,
+				7A75CD31EE64B340F436233A /* GLPIAuthService.swift in Sources */,
+				46FF9A38C2E38D0354FFF82E /* GLPIKioskApp.swift in Sources */,
+				584BB9412F22616A90790E30 /* HTTPClient.swift in Sources */,
+				4501886FEBACFC06A213B70C /* IdleView.swift in Sources */,
+				CCCBDC205C3BA59717821CFD /* JSONConversions.swift in Sources */,
+				7C8184F45DF3FC0EA3439ECD /* KeychainStore.swift in Sources */,
+				9987D7E595883AE18FFF975C /* KioskState.swift in Sources */,
+				95B003212407DFF8DAB9DCE8 /* QuickSignAPIService.swift in Sources */,
+				43553C66619314C79842C363 /* QuickSignFlowView.swift in Sources */,
+				34010468A0684F8EA0186C83 /* RootView.swift in Sources */,
+				B17DCD513E7FC1A02B6CD20E /* SettingsGateView.swift in Sources */,
+				CB36E8FA7D69D86B4E030B5E /* SettingsView.swift in Sources */,
+				F8FF46A72AC572953F2B3738 /* SetupView.swift in Sources */,
+				10D5333ECF1F332C35AB96B9 /* SignaturePadView.swift in Sources */,
+				AF27489150AF591088E50AC3 /* SignatureRequestView.swift in Sources */,
+				A0C9576F6FCFE57D06467494 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		032444254B1A0007EEE6E405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ND34M53QXR;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GLPIKiosk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.jcd.glpikiosk;
+				PRODUCT_NAME = GLPIKiosk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		0B3800A3D5477185CAF0326A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		B4D8ED63A17F2B5F6C8A4B5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ND34M53QXR;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GLPIKiosk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.jcd.glpikiosk;
+				PRODUCT_NAME = GLPIKiosk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		D73EFCEDA52F2C54E43EB4B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11B0703025B7AFC4A8094584 /* Build configuration list for PBXProject "GLPIKiosk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3800A3D5477185CAF0326A /* Debug */,
+				D73EFCEDA52F2C54E43EB4B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		19835441CD231EA8980AC7CF /* Build configuration list for PBXNativeTarget "GLPIKiosk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4D8ED63A17F2B5F6C8A4B5F /* Debug */,
+				032444254B1A0007EEE6E405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AD861E4E2259D619797D2CE /* Project object */;
+}

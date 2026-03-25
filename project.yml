@@ -1,0 +1,53 @@
+name: GLPIKiosk
+options:
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: 5.9
+packages: {}
+fileGroups:
+  - GLPIKiosk/Info.plist
+  - GLPIKiosk/PrivacyInfo.xcprivacy
+targets:
+  GLPIKiosk:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: GLPIKiosk/App
+        excludes:
+          - "**/.DS_Store"
+          - "**/._*"
+      - path: GLPIKiosk/Core
+        excludes:
+          - "**/.DS_Store"
+          - "**/._*"
+      - path: GLPIKiosk/Features
+        excludes:
+          - "**/.DS_Store"
+          - "**/._*"
+      - path: GLPIKiosk/Shared
+        excludes:
+          - "**/.DS_Store"
+          - "**/._*"
+      - path: GLPIKiosk/Media.xcassets
+        buildPhase: resources
+        excludes:
+          - "**/.DS_Store"
+          - "**/._*"
+      - path: GLPIKiosk/PrivacyInfo.xcprivacy
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: fr.jcd.glpikiosk
+        PRODUCT_NAME: GLPIKiosk
+        MARKETING_VERSION: 1.0.0
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: GLPIKiosk/Info.plist
+        IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+        TARGETED_DEVICE_FAMILY: "2"   # iPad only
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
