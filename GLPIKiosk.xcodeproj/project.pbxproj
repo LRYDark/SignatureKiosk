@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		78DB02713FB45A232981CCA0 /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196DFE9BAA2737B9D1BB23FB /* AppModels.swift */; };
 		7A75CD31EE64B340F436233A /* GLPIAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601704329A66C0438FF711CD /* GLPIAuthService.swift */; };
 		7C8184F45DF3FC0EA3439ECD /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9EF099991EB1CD71F27B4 /* KeychainStore.swift */; };
+		7F785A57300F698200EEBFAD /* InvoiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F785A56300F697700EEBFAD /* InvoiceService.swift */; };
 		95B003212407DFF8DAB9DCE8 /* QuickSignAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F13F3E744552683F209095 /* QuickSignAPIService.swift */; };
 		9987D7E595883AE18FFF975C /* KioskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6FD62D08FF4E031C106E7 /* KioskState.swift */; };
 		A0C9576F6FCFE57D06467494 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C9FD5F44538B92D77CFDC /* Theme.swift */; };
@@ -52,6 +53,7 @@
 		706E09FE20C4B98494951312 /* DirectSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectSignView.swift; sourceTree = "<group>"; };
 		7BBCDCC7BFE41064D38B9099 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7D4CF17C4635DE59276B6828 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
+		7F785A56300F697700EEBFAD /* InvoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceService.swift; sourceTree = "<group>"; };
 		855609FD7386CC2E6B7112A2 /* DebugBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugBarView.swift; sourceTree = "<group>"; };
 		8DBB17BEDD3932945B9EC7D5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		A2BD4A9799870A45A0AE6A22 /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,10 @@
 		FA454CF7A83C680197723488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FC7B6CD7AE37FD43153AB437 /* SettingsGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7F195420300E5D230040D77C /* DocumentScanner */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DocumentScanner; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXGroup section */
 		060E82D0817485928A96EF3C /* Storage */ = {
@@ -125,6 +131,7 @@
 		25F40AD57A73D05042E335FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7F785A56300F697700EEBFAD /* InvoiceService.swift */,
 				21E716A1C2289C7ADC5BE99A /* DebugLogger.swift */,
 				7D4CF17C4635DE59276B6828 /* DeviceService.swift */,
 				601704329A66C0438FF711CD /* GLPIAuthService.swift */,
@@ -163,6 +170,7 @@
 		884AFEE1452F34EBD0C89951 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7F195420300E5D230040D77C /* DocumentScanner */,
 				7F85F01BBC22F009CF029814 /* Confirmation */,
 				5D965180761CF0BFAF3FFCD9 /* DirectSign */,
 				1DF8B133249CB5CDB9952F0C /* Idle */,
@@ -256,6 +264,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				7F195420300E5D230040D77C /* DocumentScanner */,
+			);
 			name = GLPIKiosk;
 			packageProductDependencies = (
 			);
@@ -314,6 +325,7 @@
 				6A4F21A0E72B0D9F7A804892 /* DebugLogger.swift in Sources */,
 				0E655E3522A5058BF05E8B98 /* DeviceService.swift in Sources */,
 				B5DD8D770DE3B924FE7E6BA1 /* DirectSignView.swift in Sources */,
+				7F785A57300F698200EEBFAD /* InvoiceService.swift in Sources */,
 				7A75CD31EE64B340F436233A /* GLPIAuthService.swift in Sources */,
 				46FF9A38C2E38D0354FFF82E /* GLPIKioskApp.swift in Sources */,
 				584BB9412F22616A90790E30 /* HTTPClient.swift in Sources */,
@@ -351,7 +363,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.jcd-groupe.kiosque-de-signatures-by-jcd";
 				PRODUCT_NAME = GLPIKiosk;
 				SDKROOT = iphoneos;
@@ -437,7 +449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.jcd-groupe.kiosque-de-signatures-by-jcd";
 				PRODUCT_NAME = GLPIKiosk;
 				SDKROOT = iphoneos;

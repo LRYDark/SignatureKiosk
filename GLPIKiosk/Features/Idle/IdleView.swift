@@ -4,12 +4,15 @@
 
 import SwiftUI
 import UIKit
+import VisionKit
 
 struct IdleView: View {
     @EnvironmentObject private var kiosk: KioskState
     @State private var showSettings      = false
     @State private var showDirectSignBL  = false
     @State private var showDirectSignTkt = false
+    @State private var showScanTicket    = false
+    @State private var scannedTicketImage: UIImage? = nil
     @State private var isSoftSleeping    = false
     @State private var softSleepTask: Task<Void, Never>? = nil
 
@@ -76,7 +79,7 @@ struct IdleView: View {
                         Button {
                             showDirectSignBL = true
                         } label: {
-                            Label("Signature Rapide BL", systemImage: "shippingbox.fill")
+                            Label("Signature BL", systemImage: "shippingbox.fill")
                                 .font(.title3.weight(.semibold))
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 18)
@@ -89,7 +92,7 @@ struct IdleView: View {
                         Button {
                             showDirectSignTkt = true
                         } label: {
-                            Label("Signature Rapide Ticket", systemImage: "ticket.fill")
+                            Label("Signature Ticket", systemImage: "ticket.fill")
                                 .font(.title3.weight(.semibold))
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 18)
@@ -97,9 +100,23 @@ struct IdleView: View {
                         .buttonStyle(.bordered)
                         .tint(KioskTheme.brand)
                         .disabled(!isQuickSignAuthConfigured)
+                        
+                        // Scan
+                        Button {
+                            showScanTicket = true
+                        } label: {
+                            Label("Scan Ticket", systemImage: "camera.fill")
+                                .font(.title3.weight(.semibold))
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 18)
+                        }
+                        .buttonStyle(.bordered)
+                        .tint(KioskTheme.brand)
+                        .disabled(!isQuickSignAuthConfigured || !VNDocumentCameraViewController.isSupported)
+
                     }
                     .padding(.horizontal, 40)
-                    .frame(maxWidth: 700)
+                    .frame(maxWidth: 900)
 
                     if !isQuickSignAuthConfigured {
                         Text("La borne kiosque fonctionne sans utilisateur. Les boutons Signature Rapide nécessitent un utilisateur GLPI (OAuth déjà connecté ou mode Legacy v1 avec App-Token + user_token).")
@@ -178,6 +195,9 @@ struct IdleView: View {
         .onChange(of: showDirectSignTkt) { _, _ in
             handleSheetPresentationChanged()
         }
+        .onChange(of: showScanTicket) { _, _ in
+            handleSheetPresentationChanged()
+        }
         .sheet(isPresented: $showSettings) {
             SettingsView()
                 .environmentObject(kiosk)
@@ -190,10 +210,13 @@ struct IdleView: View {
             QuickSignFlowView(type: .ticket)
                 .environmentObject(kiosk)
         }
+        .sheet(isPresented: $showScanTicket) {
+            DocumentScannerView(scannedImage: $scannedTicketImage)
+        }
     }
 
     private var isPresentingSheet: Bool {
-        showSettings || showDirectSignBL || showDirectSignTkt
+        showSettings || showDirectSignBL || showDirectSignTkt || showScanTicket
     }
 
     private func handleSheetPresentationChanged() {
