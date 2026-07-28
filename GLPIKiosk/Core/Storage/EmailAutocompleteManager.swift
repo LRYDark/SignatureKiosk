@@ -9,7 +9,7 @@ class EmailAutocompleteManager: ObservableObject {
     @Published var suggestions: [String] = []
     
     private let storeKey = "SavedSignerEmails"
-    private let maxAge: TimeInterval = 14 * 24 * 60 * 60 // 2 semaines en secondes
+    private let maxAge: TimeInterval = 120 * 24 * 60 * 60 // 2 semaines en secondes
 
     func updateSuggestions(for query: String) {
         guard query.count >= 4 else {
