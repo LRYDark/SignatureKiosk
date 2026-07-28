@@ -49,6 +49,9 @@ struct QuickSignFlowView: View {
     @State private var showBLFullscreenFlow = false
     @State private var blFullscreenStage: QuickBLFullscreenStage = .preview
     @State private var showTicketFullscreenFlow = false
+    
+    // NOUVEAU: Gestionnaire d'autocomplétion
+    @StateObject private var emailManager = EmailAutocompleteManager()
 
     private var api: QuickSignAPIService { QuickSignAPIService(settings: kiosk.settings) }
 
@@ -470,18 +473,57 @@ struct QuickSignFlowView: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text("Signataire")
                     .font(.headline)
+                
                 TextField("Nom complet *", text: $signerName)
                     .autocorrectionDisabled()
                     .textFieldStyle(.roundedBorder)
-                TextField("Email (optionnel)", text: $signerEmail)
-                    .keyboardType(.emailAddress)
-                    .textInputAutocapitalization(.never)
-                    .autocorrectionDisabled()
-                    .textFieldStyle(.roundedBorder)
+                
+                // NOUVEAU: Autocomplétion Email
+                VStack(alignment: .leading, spacing: 0) {
+                    TextField("Email (optionnel)", text: $signerEmail)
+                        .keyboardType(.emailAddress)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                        .textFieldStyle(.roundedBorder)
+                        .onChange(of: signerEmail) { _, newValue in
+                            emailManager.updateSuggestions(for: newValue)
+                        }
+                    
+                    if !emailManager.suggestions.isEmpty {
+                        ScrollView {
+                            VStack(alignment: .leading, spacing: 0) {
+                                ForEach(emailManager.suggestions, id: \.self) { suggestion in
+                                    Button(action: {
+                                        signerEmail = suggestion
+                                        emailManager.suggestions = [] // Masquer après sélection
+                                    }) {
+                                        Text(suggestion)
+                                            .font(.subheadline)
+                                            .padding(.vertical, 10)
+                                            .padding(.horizontal, 12)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .background(Color(UIColor.systemBackground))
+                                    }
+                                    .buttonStyle(.plain)
+                                    Divider()
+                                }
+                            }
+                        }
+                        .frame(maxHeight: 140)
+                        .background(Color(UIColor.systemBackground))
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.secondary.opacity(0.2), lineWidth: 1)
+                        )
+                        .padding(.top, 4)
+                    }
+                }
             }
             .padding(16)
             .background(KioskTheme.card)
             .cornerRadius(14)
+            .zIndex(1) // Pour que la liste déroulante passe au-dessus de la signature
 
             VStack(alignment: .leading, spacing: 8) {
                 Text("Signature")
@@ -496,6 +538,7 @@ struct QuickSignFlowView: View {
             .padding(16)
             .background(KioskTheme.card)
             .cornerRadius(14)
+            .zIndex(0)
 
             Button {
                 submit()
@@ -1118,6 +1161,9 @@ struct QuickSignFlowView: View {
             errorMsg = "Veuillez signer dans la zone."
             return
         }
+
+        // NOUVEAU: Sauvegarder l'email utilisé
+        emailManager.save(email)
 
         isSubmitting = true
         errorMsg = nil

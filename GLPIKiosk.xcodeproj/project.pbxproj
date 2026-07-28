@@ -19,6 +19,7 @@
 		78DB02713FB45A232981CCA0 /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196DFE9BAA2737B9D1BB23FB /* AppModels.swift */; };
 		7A75CD31EE64B340F436233A /* GLPIAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601704329A66C0438FF711CD /* GLPIAuthService.swift */; };
 		7C8184F45DF3FC0EA3439ECD /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9EF099991EB1CD71F27B4 /* KeychainStore.swift */; };
+		7F3A979E301891F600385E8B /* EmailAutocompleteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A979D301891F500385E8B /* EmailAutocompleteManager.swift */; };
 		7F785A57300F698200EEBFAD /* InvoiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F785A56300F697700EEBFAD /* InvoiceService.swift */; };
 		95B003212407DFF8DAB9DCE8 /* QuickSignAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F13F3E744552683F209095 /* QuickSignAPIService.swift */; };
 		9987D7E595883AE18FFF975C /* KioskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6FD62D08FF4E031C106E7 /* KioskState.swift */; };
@@ -53,6 +54,7 @@
 		706E09FE20C4B98494951312 /* DirectSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectSignView.swift; sourceTree = "<group>"; };
 		7BBCDCC7BFE41064D38B9099 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7D4CF17C4635DE59276B6828 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
+		7F3A979D301891F500385E8B /* EmailAutocompleteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAutocompleteManager.swift; sourceTree = "<group>"; };
 		7F785A56300F697700EEBFAD /* InvoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceService.swift; sourceTree = "<group>"; };
 		855609FD7386CC2E6B7112A2 /* DebugBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugBarView.swift; sourceTree = "<group>"; };
 		8DBB17BEDD3932945B9EC7D5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		060E82D0817485928A96EF3C /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				7F3A979D301891F500385E8B /* EmailAutocompleteManager.swift */,
 				20F9EF099991EB1CD71F27B4 /* KeychainStore.swift */,
 			);
 			path = Storage;
@@ -321,6 +324,7 @@
 				EA9243B5728DE9FB86635784 /* APIError.swift in Sources */,
 				78DB02713FB45A232981CCA0 /* AppModels.swift in Sources */,
 				A67DFE371FF6366B24383974 /* ConfirmationView.swift in Sources */,
+				7F3A979E301891F600385E8B /* EmailAutocompleteManager.swift in Sources */,
 				C94F436C8473A46B1F445FB8 /* DebugBarView.swift in Sources */,
 				6A4F21A0E72B0D9F7A804892 /* DebugLogger.swift in Sources */,
 				0E655E3522A5058BF05E8B98 /* DeviceService.swift in Sources */,
